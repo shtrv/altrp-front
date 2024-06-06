@@ -1,0 +1,66 @@
+{
+    "id": "295809",
+    "snos_fields": {
+        "pp": {},
+        "dgi": {},
+        "zak": {}
+    }
+}
+
+{
+    "pp": {
+        "bd_id": "",
+        "bd_date": "",
+        "bd_title": "",
+        "bd_number": "",
+        "comment": ""
+    },
+    "dgi": {
+        "bd_id": "",
+        "bd_date": "",
+        "bd_title": "",
+        "bd_number": "",
+        "rd_number": "",
+        "rd_date": "",
+        "comment": ""
+    },
+    "zak": {
+        "bd_id": "",
+        "bd_date": "",
+        "bd_title": "",
+        "bd_number": "",
+        "comment": ""
+    }
+}
+
+{
+    "pp": {
+        "bd_id": "J0tq",
+        "bd_date": "2023-12-16",
+        "bd_title": "Тестовый заголовок",
+        "bd_number": "(ТТ)02.11э-39/23",
+        "comment": "12346вв"
+    },
+    "dgi": {
+        "bd_id": "J0tq",
+        "bd_date": "2023-12-16",
+        "bd_title": "Тестовый заголовок",
+        "bd_number": "(ТТ)02.11э-39/23",
+        "rd_number": "",
+        "rd_date": "",
+        "comment": ""
+    },
+    "zak": {
+        "bd_id": "J0tq",
+        "bd_date": "2023-12-16",
+        "bd_title": "Тестовый заголовок",
+        "bd_number": "(ТТ)02.11э-39/23",
+        "comment": ""
+    },
+    "snos": {
+        "status": "2130",
+        "obj_name": "ТЕСТ",
+        "customer": "ТЕСТ",
+        "comment": ""
+    }
+}

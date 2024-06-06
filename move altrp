@@ -1,0 +1,14 @@
++1. Перекидываю свой экземпляр в /var/www/altrp/site_food
++2. В .env меняю(своего экземпляра): 
+    APP_URL=http://192.168.100.140
+    PG_DB_HOST=192.168.100.173
+    PG_DB_DATABASE=FOOD
+    PG_DB_USERNAME
+    PG_DB_PASSWORD
++3. В pm2.config.js меняю пути "site" на "site_food"
++4. Создаю базу данных FOOD и восстанавливаю в нее бэкап
++5. Добавляю правило для Nginx
+
+curl -X POST -F "url=https://food.geobuilder.ru/ajax/models/envs/customizers/tg_webhook_food_4jplt3rto" -F "certificate=@/etc/ssl/zayavka.crt" https://api.telegram.org/bot7139829999:AAG9KpQy9ULG5oY-64K8bn0aAFBXz4ZuPFg/setWebhook
+
+
