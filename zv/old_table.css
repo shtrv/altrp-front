@@ -1,0 +1,25 @@
+._w5d0knqu3.altrp-field-select2__control.css-entfk-control {
+    margin-left: -10px;   
+   }
+   __selector__ .altrp-table-td
+   {
+       max-width: 150px;
+   }
+   __selector__ .altrp-table-td > span
+   {
+       word-wrap: break-word;
+   }
+   __selector__ .altrp-table-th
+   {
+       white-space: nowrap;
+   }
+   
+   __selector__ .altrp_table-zIndex > div
+   {
+       max-height: calc(100vh - 175px) !important;
+       max-width: 100vw !important;
+       overflow-x: auto !important;
+       overflow-y: auto !important;
+       margin-right: 0 !important;
+       margin-bottom: 0 !important;
+   }

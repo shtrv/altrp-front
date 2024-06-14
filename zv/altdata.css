@@ -45,6 +45,13 @@ __selector__ .altdata-table-body tbody > tr:nth-child(even)
 	background-color: rgb(16 22 26 / 3%);
 }
 
+/*Перенос слов*/
+__selector__ .altdata-table-body tbody > tr > td
+{
+    word-wrap: break-word;
+    white-space: normal;
+}
+
 /*Наведение*/
 __selector__ .altdata-table-body tbody > tr:hover
 {
@@ -74,7 +81,8 @@ __selector__ .altdata-table-head tbody > tr:nth-child(1) > td
 }
 __selector__ .altdata-table-head tbody > tr:nth-child(2) > td
 {
-    font-weight: bold;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 /*Выравнивание по столбцам*/
