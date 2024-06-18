@@ -74,12 +74,8 @@ __selector__ .altdata-table-foot tr > td:nth-child(2) .cell-container
 	text-align: right;
 }
 
-/*Прячем границы в первой строке заголовка, жирный шрифт для второй*/
+/*Жирный шрифт для шапки*/
 __selector__ .altdata-table-head tbody > tr:nth-child(1) > td
-{
-	border: none;
-}
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td
 {
     font-weight: bolder;
     color: rgba(0, 0, 0, 0.6);
