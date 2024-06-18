@@ -88,7 +88,7 @@ __selector__ .altdata-table-head tbody > tr:nth-child(2) > td
 /*Выравнивание по столбцам*/
 
 /*№ п/п*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(1)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(1)
 {
 	text-align: center;
 }
@@ -98,7 +98,7 @@ __selector__ .altdata-table-body tbody > tr > td:nth-child(1)
 }
 
 /*Тип*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(2)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(2)
 {
 	text-align: center;
 }
@@ -108,7 +108,7 @@ __selector__ .altdata-table-body tbody > tr > td:nth-child(2)
 }
 
 /*Дата*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(4)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(4)
 {
 	text-align: center;
 }
@@ -118,7 +118,7 @@ __selector__ .altdata-table-body tbody > tr > td:nth-child(4)
 }
 
 /*Сеть*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(5)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(5)
 {
 	text-align: center;
 }
@@ -128,7 +128,7 @@ __selector__ .altdata-table-body tbody > tr > td:nth-child(5)
 }
 
 /*Подр.*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(6)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(6)
 {
 	text-align: center;
 }
@@ -138,7 +138,7 @@ __selector__ .altdata-table-body tbody > tr > td:nth-child(6)
 }
 
 /*Нач.(план)*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(11)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(11)
 {
 	text-align: center;
 }
@@ -148,7 +148,7 @@ __selector__ .altdata-table-body tbody > tr > td:nth-child(11)
 }
 
 /*Срок*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(12)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(12)
 {
 	text-align: center;
 }
@@ -158,7 +158,7 @@ __selector__ .altdata-table-body tbody > tr > td:nth-child(12)
 }
 
 /*Осталось*/
-__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(13)
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(13)
 {
 	text-align: center;
 }
