@@ -1,5 +1,5 @@
 var frm = altrpHelpers.getDataByPath('altrpforms.edit_form');
-var pricePerYear = (frm.price / frm.limits.length).toFixed(2);
+var pricePerYear = (frm.price / frm.limits.length).toFixed(3);
 var limits = altrpHelpers.getDataByPath('altrpforms.limit');
 var l = 0;
 var lastLimit;
@@ -10,7 +10,7 @@ for (var limit in limits) {
 		altrpHelpers.setDataByPath('altrpforms.limit.' + limit, pricePerYear);
 	}
 }
-altrpHelpers.setDataByPath('altrpforms.limit.' + lastLimit, Number(frm.price - (pricePerYear * (frm.limits.length-1))).toFixed(2));
+altrpHelpers.setDataByPath('altrpforms.limit.' + lastLimit, Number(frm.price - (pricePerYear * (frm.limits.length-1))).toFixed(3));
 RaiseActions('_calc_sum_');
 
 
@@ -55,7 +55,7 @@ else {
 		newLimits.push(
 			{
 				year: Number(i),
-				limit: Number(limit).toFixed(2)
+				limit: Number(limit).toFixed(3)
 			}
 		);
 	}
@@ -65,3 +65,11 @@ else {
 	altrpHelpers.getComponentByElementId('limits_cards').updateElement();
 	RaiseActions('_calc_sum_');
 }
+
+
+
+
+//Change Actions
+var price = altrpHelpers.getDataByPath('altrpforms.edit_form.price');
+var round_price = Number(price).toFixed(3);
+altrpHelpers.setDataByPath('altrpforms.edit_form.price', round_price);
