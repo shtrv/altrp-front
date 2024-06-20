@@ -23,7 +23,7 @@ for (var limit in limits) {
 		l += Number(limits[limit]);
 	}
 }
-altrpHelpers.setDataByPath('altrpforms.edit_form_calc.price', Number(l.toFixed(3))); 
+altrpHelpers.setDataByPath('altrpforms.edit_form_calc.price', Number(l).toFixed(3)); 
 
 
 
