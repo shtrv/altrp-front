@@ -1,0 +1,18 @@
+Добрый день!
+
+Продублировал необходимые кастомайзеры с "no_authz" в названии.
+creator_id и editor_id они не создают
+
+Достыпны по следующим адресам:
+
+post_uzik_arenda_no_authz
+http://192.168.100.140:147/api/v1/post_uzik_arenda_no_authz_l6ibnlhjx
+
+put_uzik_arenda_no_authz
+http://192.168.100.140:147/api/v1/put_uzik_arenda_no_authz_nt9uy1p51
+
+post_uzik_kadastr_no_authz
+http://192.168.100.140:147/api/v1/post_uzik_kadastr_no_authz_h62mm2t2r
+
+put_uzik_kadastr_no_authz
+http://192.168.100.140:147/api/v1/put_uzik_kadastr_no_authz_72jbqr8uk

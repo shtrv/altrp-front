@@ -82,17 +82,28 @@ with
     	select count(*) as cnt from result
     )
 select 
-	json_agg(r) as rows
-	,(
-		select row_to_json(s)
-		from 
-		(
-			select
-				{{REQUEST:page}} as current_page
-				,(((select cnt from rows_count_all) / 50)::int+1) as last_page
-				,(select cnt from rows_count_all) as rows_count_all
-				,(select cnt from rows_count) as rows_count
-		)s	
-	) as meta
+    coalesce(json_agg(r), '[]'::json) as rows,
+    (
+        select row_to_json(s)
+        from 
+        (
+            select 
+                case when {{REQUEST:page}} > last_page then last_page else {{REQUEST:page}} end as current_page, -- Название поля не менять
+                last_page,
+                case when rows_count_all = 0 then 'Нет данных для отображения' else 'Записи ' || row_num_begin::text || ' - ' || row_num_end::text || ' из ' || to_ch(rows_count_all, 'FM999 999 999') end rows_count_info,
+                null as rows_count_no_filter,
+                0 as pinned_count,
+                coalesce(rows_count_all - 0, 0) as filtered_count -- Количество отобранных строк без учета закрепленных
+            from
+            (
+                select
+                    (((select cnt from rows_count_all) / {{REQUEST:pageSize}})::int+1) as last_page, -- Название поля не менять
+                    (select cnt from rows_count_all) as rows_count_all,
+                    (select cnt from rows_count) as rows_count,
+                    ({{REQUEST:page}}-1) * {{REQUEST:pageSize}} + 1 as row_num_begin,
+                    ({{REQUEST:page}}-1) * {{REQUEST:pageSize}} + (select cnt from rows_count) as row_num_end
+            ) s
+        ) s    
+    ) as meta
 from result r
 
