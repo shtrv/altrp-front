@@ -17,6 +17,6 @@ var frm = altrpHelpers.getDataByPath('altrpforms.edit_form');
 var price;
 if (frm.max_diameter > 0 && frm.laying_type > 0 && frm.length > 0 && frm.method_id == 2192){
     price = prices.filter(i=>i.laying_type_id == frm.laying_type && i.min_diameter < frm.max_diameter && i.max_diameter >= frm.max_diameter)[0]?.price * frm.length / 1000.0;
-	altrpHelpers.setDataByPath('altrpforms.edit_form.price', price?.toFixed(2));
+	altrpHelpers.setDataByPath('altrpforms.edit_form.price',  (!isNaN(price) ? price.toFixed(2) : 0.000));
 	altrpHelpers.setDataByPath('altrpforms.edit_form.price_is_autocalculated', (price > 0 ? 1 : 0));
 }
