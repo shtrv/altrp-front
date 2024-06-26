@@ -12,4 +12,6 @@ saveFormValuesToPageMeta('filter', 'zvfilter');
 var t = altrpHelpers.getDataByPath('altrppagestate.altdata.tables');
 Object.keys(t).forEach(id=>t[id].context.updateData());	//Рефреш таблицы
 
-ToggleElements('filter_panel');
+if (IsWidgetVisible('filter_panel')) {
+  ToggleElements('filter_panel');
+}
