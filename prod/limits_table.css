@@ -1,7 +1,7 @@
 __selector__
 {
     min-height: 700px;
-    max-height: auto;
+    max-height: 700px;
     display: none;
 }
 __selector__ .altrp-column

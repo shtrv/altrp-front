@@ -10,8 +10,7 @@ else {
 	window.limits_table.style.left = '0px';
 	window.limits_table.getElementsByClassName('altrp-column')[0].style.minHeight = (document.getElementsByClassName('popup-content')[0].clientHeight+42) + 'px';
 	window.limits_table.getElementsByClassName('altrp-column')[0].style.minWidth = (document.getElementsByClassName('popup-content')[0].clientWidth) + 'px';
-    window.limits_table.style.height = (document.getElementsByClassName('popup-window')[0].clientHeight + 'px');
-    window.limits_table.style.overflowY = 'scroll';
+    //window.limits_table.style.height = (document.getElementsByClassName('popup-window')[0].clientHeight + 'px');
 
 	var limits = altrpHelpers.getDataByPath('altrpforms.limit');
 	for (var limit in limits)
