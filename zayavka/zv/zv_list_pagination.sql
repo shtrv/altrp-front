@@ -4,7 +4,7 @@ with
 	(
 		select array(
     		select str::bigint id 
-    		from unnest(string_to_array('{{REQUEST:develop_structure_id}}', ',')) WITH ORDINALITY a(str, num)
+    		from unnest(string_to_array('{{REQUEST:deps}}', ',')) WITH ORDINALITY a(str, num)
     	) ids
 	),
     report_keys as
@@ -26,8 +26,8 @@ with
                         or '{{REQUEST:any_dep}}' = '1'
                         or exists(select ids from develop_structures where z.coworkers_array && ids)
                     )
-                    --and (develop.id::text in ({{REQUEST:develop_structure_id}}) or manage.id::text in ({{REQUEST:develop_structure_id}}))
-                    {{IF_AND_REQUEST:z.ceh_id:ceh_id:IN}}
+                    --and (develop.id::text in ({{REQUEST:deps}}) or manage.id::text in ({{REQUEST:deps}}))
+                    {{IF_AND_REQUEST:z.ceh:ceh:IN}}
                     {{IF_AND_REQUEST:z.spec_code:spec_code:IN}}
                     {{IF_AND_REQUEST:(z.avar_or_plan+55):avar:IN}}
                     {{IF_AND_REQUEST:z.reason_id:reason:IN}}
@@ -46,13 +46,13 @@ with
             ) 
             and
             (
-                z.landmark_text ilike '%' || trim('{{REQUEST:search_text}}') || '%'
-                or z.comment_on_create ilike '%' || trim('{{REQUEST:search_text}}') || '%'
-                or z.dep_name ilike '%' || trim('{{REQUEST:search_text}}') || '%'
-                or z.last_stage_name ilike '%' || trim('{{REQUEST:search_text}}') || '%'
-                or z.last_comments ilike '%' || trim('{{REQUEST:search_text}}') || '%'
-                or z.creator_name ilike '%' || trim('{{REQUEST:search_text}}') || '%'
-                or z.number = try_cast(trim('{{REQUEST:search_text}}')) --Попытка найти по номеру
+                z.landmark_text ilike '%' || trim('{{REQUEST:search}}') || '%'
+                or z.comment_on_create ilike '%' || trim('{{REQUEST:search}}') || '%'
+                or z.dep_name ilike '%' || trim('{{REQUEST:search}}') || '%'
+                or z.last_stage_name ilike '%' || trim('{{REQUEST:search}}') || '%'
+                or z.last_comments ilike '%' || trim('{{REQUEST:search}}') || '%'
+                or z.creator_name ilike '%' || trim('{{REQUEST:search}}') || '%'
+                or z.number = try_cast(trim('{{REQUEST:search}}')) --Попытка найти по номеру
             )
             and 
             (
