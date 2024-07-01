@@ -40,9 +40,12 @@ window.on_show_loader = function(show){
 setTimeout(function(){
 	var head1 = document.getElementsByClassName('altdata-table-head')[0].getElementsByTagName('tr')[1];
 	var body = document.getElementsByClassName('altdata-table-body')[0].getElementsByTagName('div')[1];
+	/*
 	body.onscroll = function(evt) {
 		head1.style.transform = 'translateX(' + '-' + (body.scrollLeft) + 'px)';
+		body.style.transform = 'translateX(' + '-' + (body.scrollLeft) + 'px)';
 	}
+	*/
     console.log('on scroll ready');
 }, 5000);
 console.log('loader ready');

@@ -7,7 +7,7 @@ Object.keys(filter).forEach(key => {
       setPageParams(key, filter[key]);
     }
   });
-saveFormValuesToPageMeta('filter', 'zvfilter');
+//saveFormValuesToPageMeta('filter', 'zvfilter');
 
 var t = altrpHelpers.getDataByPath('altrppagestate.altdata.tables');
 Object.keys(t).forEach(id=>t[id].context.updateData());	//Рефреш таблицы
