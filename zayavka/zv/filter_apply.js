@@ -5,19 +5,22 @@ Object.keys(appStore.getState().formsStore.filter).forEach(name=>{
 window.history.replaceState(null, null, '?' + new URLSearchParams(params));
 appStore.getState().altrpPage.setProperty('params', params);
 
+RaiseActions('_param_clear_');
+
 
 var filter = altrpHelpers.getDataByPath("altrpforms.filter");
+
 Object.keys(filter).forEach(key => {
-    // Проверяем, что значение свойства не пустое (не null и не undefined)
-    if (filter[key] !== null && filter[key] !== undefined && filter[key] !== '') {
-      // Вызываем setPageParams для непустого свойства
-      setPageParams(key, filter[key]);
-    }
-  });
-//saveFormValuesToPageMeta('filter', 'zvfilter');
+  // Проверяем, что значение свойства не пустое (не null и не undefined)
+  if (filter[key] !== null && filter[key] !== undefined && filter[key] !== '') {
+    // Вызываем setPageParams для непустого свойства
+    setPageParams(key, filter[key]);
+  }
+});
 
 var t = altrpHelpers.getDataByPath('altrppagestate.altdata.tables');
 Object.keys(t).forEach(id=>t[id].context.updateData());	//Рефреш таблицы
+
 
 Object.keys(filter).forEach(key => {
   // Проверяем, что значение свойства не пустое (не null и не undefined)
