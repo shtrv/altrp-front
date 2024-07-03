@@ -1,0 +1,134 @@
+/* Стили для пагинации */
+__selector__ .altdata-pagination-button
+{
+    margin: 2px;
+}
+
+/* Стили для контейнера таблицы */
+__selector__ .altdata-table-container
+{
+    min-height: calc(100vh - 60px); /*Не менять*/
+    height: calc(100vh - 60px);
+}
+
+/* Стили для тела таблицы */
+__selector__ .altdata-table-body
+{
+    min-height: calc(100vh - 230px - 50px);
+}
+
+__selector__ .altdata-table-body > div:first-child
+{
+    min-height: unset !important;
+	max-height: unset !important;
+}
+
+__selector__ .altdata-table-body > div:first-child > div:first-child
+{
+    min-height: calc(100vh - 211px - 50px) !important;
+	max-height: calc(100vh - 211px - 50px) !important;
+}
+
+/* Стили для заголовка и футера таблицы */
+__selector__ .altdata-table-head tbody > tr > td
+{
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #e3e4e6) !important;
+}
+__selector__ .altdata-table-foot tr > td
+{
+	background-image: -webkit-linear-gradient(top, #dfe9f5, #d3e1f1) !important;
+}
+
+/*Чрезстрочная расцветка*/
+__selector__ .altdata-table-body tbody > tr:nth-child(even)
+{
+	background-color: rgb(16 22 26 / 3%);
+}
+
+/*Перенос слов*/
+__selector__ .altdata-table-body tbody > tr > td
+{
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/*Наведение*/
+__selector__ .altdata-table-body tbody > tr:hover
+{
+	background-color: rgb(16 22 26 / 6%);
+}
+
+/*__selector__ .altdata-table-foot table
+{
+	width: unset !important;
+}*/
+
+/* Стили для футера таблицы */
+__selector__ .altdata-table-foot tbody
+{
+	width: 100% !important;
+}
+
+__selector__ .altdata-table-foot tr > td:nth-child(2) .cell-container
+{
+	text-align: right;
+}
+
+/*Жирный шрифт для шапки*/
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td
+{
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/*Выравнивание по столбцам*/
+
+/*Тип*/
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(1)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(1)
+{
+	text-align: center;
+}
+
+/*№*/
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(2)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(2)
+{
+	text-align: center;
+}
+
+/*Площадка*/
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(3)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(3)
+{
+	text-align: left;
+}
+
+/*Дата*/
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(4)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(4)
+{
+	text-align: center;
+}
+
+/*Подр.*/
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td:nth-child(5)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(5)
+{
+	text-align: center;
+}

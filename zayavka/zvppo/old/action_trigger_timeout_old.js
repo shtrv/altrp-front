@@ -17,12 +17,12 @@ document.querySelectorAll('[Title="Toggle SortBy"]').forEach(function(i)
 
 /*             Item #3          */
 //setdata
-altrppagestate.list {{altrpdata.list}}
+//altrppagestate.list {{altrpdata.list}}
 
 
 /*             Item #4          */
 //condition
-altrpdata.list empty
+//altrpdata.list empty
 
 
 /*             Item #5          */
