@@ -23,7 +23,7 @@ await(
             
             query.orWhere(query=>{
             for(const s of search){
-                query.orWhere('name','ilike', `%${s}%`)
+                query.orWhere('zakazchik','ilike', `%${s}%`)
             }
             })
             }
@@ -32,12 +32,12 @@ await(
             let search = all.s.split(' ')
             search = search.filter(s=>s)
             
-            query.orWhere(query=>{
+            /* query.orWhere(query=>{
             for(const s of search){
-                query.orWhere('title','ilike', `%${s}%`)
+                query.orWhere('object_name','ilike', `%${s}%`)
             }
             })
-            }
+            } */
         }
     )
     
@@ -47,7 +47,7 @@ await(
     
     query.orWhere(query=>{
     for(const s of search){
-        query.orWhere('description','ilike', `%${s}%`)
+        //query.orWhere('description','ilike', `%${s}%`)
     }
     })
     }
@@ -67,7 +67,7 @@ await(
     if(orderBy){
         query.orderBy(orderBy, order || 'asc')
     } else {
-        query.orderBy("title", 'asc')
+        query.orderBy("id", 'asc')
     }
     
     if(page && pageSize){
