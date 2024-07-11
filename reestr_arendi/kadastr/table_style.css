@@ -1,0 +1,117 @@
+__selector__ .altdata-pagination-button
+{
+    margin: 2px;
+}
+
+__selector__ .altdata-table-container
+{
+    min-height: calc(100vh - 80px);
+    height: calc(100vh - 80px);
+}
+
+__selector__ .altdata-table-body
+{
+    min-height: calc(100vh - 230px);
+}
+
+__selector__ .altdata-table-body > div:first-child
+{
+    min-height: unset !important;
+	max-height: unset !important;
+}
+
+__selector__ .altdata-table-body > div:first-child > div:first-child
+{
+    min-height: calc(100vh - 211px) !important;
+	max-height: calc(100vh - 211px) !important;
+}
+
+__selector__ .altdata-table-head tbody > tr > td
+{
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #e3e4e6) !important;
+}
+__selector__ .altdata-table-foot tr > td
+{
+	background-image: -webkit-linear-gradient(top, #dfe9f5, #d3e1f1) !important;
+}
+/*Чрезстрочная расцветка*/
+__selector__ .altdata-table-body tbody > tr:nth-child(even)
+{
+	background-color: rgb(16 22 26 / 3%);
+}
+/*Наведение*/
+__selector__ .altdata-table-body tbody > tr:hover
+{
+	background-color: rgb(16 22 26 / 6%);
+}
+
+/*__selector__ .altdata-table-foot table
+{
+	width: unset !important;
+}*/
+
+__selector__ .altdata-table-foot tbody
+{
+	width: 100% !important;
+}
+
+__selector__ .altdata-table-foot tr > td:nth-child(2) .cell-container
+{
+	text-align: right;
+}
+
+/*Прячем границы в первой строке заголовка*/
+__selector__ .altdata-table-head tbody > tr:nth-child(1) > td
+{
+	border: none;
+}
+
+
+/*Выравнивание по столбцам*/
+
+/*ID*/
+__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(1)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(1)
+{
+	text-align: center;
+}
+/*ПУ*/
+__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(2)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(2)
+{
+	text-align: center;
+}
+/*ПП*/
+__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(3)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(3)
+{
+	text-align: center;
+}
+/*Показатель*/
+__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(8)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(8)
+{
+	text-align: right;
+}
+/*Дата регистрации*/
+__selector__ .altdata-table-head tbody > tr:nth-child(2) > td:nth-child(10)
+{
+	text-align: center;
+}
+__selector__ .altdata-table-body tbody > tr > td:nth-child(10)
+{
+	text-align: center;
+}
+
