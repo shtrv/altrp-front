@@ -17,12 +17,22 @@ ip поменялся из-за обновления компа (хоститс�
     - блок "txn_f_term", можно настроить колонки, возможность редактирования, сортировки и тд..
     - если ширина колонки не задана или не влазит, то она поместится в новую строку для каждой строки
 
-Для показа таблицы поместить в виджет html:
 
-```
-<script src="/storage/media/libs/tabulator/tabulator.min.js"></script>
-<script src="/storage/media/static/tab-int.js?__generaterandom__"></script>
-<link rel="stylesheet" href="/storage/media/libs/tabulator/tabulator.min.css"/>
-<link rel="stylesheet" href="/storage/media/libs/tabulator/tabulator_semanticui.min.css"/>
-<div data-tabulator="txn_f_term" data-bulk-form="bulk_edit_txn_f_term.items"></div>
-```
+- Для показа таблицы поместить в виджет html:
+
+    <script src="/storage/media/libs/tabulator/tabulator.min.js"></script>
+    <script src="/storage/media/static/tab-int.js?__generaterandom__"></script>
+    <link rel="stylesheet" href="/storage/media/libs/tabulator/tabulator.min.css"/>
+    <link rel="stylesheet" href="/storage/media/libs/tabulator/tabulator_semanticui.min.css"/>
+    <div data-tabulator="txn_f_term" data-bulk-form="bulk_edit_txn_f_term.items"></div>
+
+
+- Отладка в консоли:
+
+    Tabulator.findTable("[data-tabulator='txn_f_term']");
+    или
+    Tabulator.registry.tables[0];
+
+- Смена цвета строки:
+
+    Tabulator.findTable("[data-tabulator='txn_f_term']")[0].getRow(6).getElement().style.backgroundColor = '#1e3b20'
