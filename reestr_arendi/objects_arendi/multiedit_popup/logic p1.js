@@ -2,6 +2,7 @@ window.prepare_edit_snos_fields = async function() {
 
     //Получаем snos_fields текущих строк и записываем в altrppagestate.assets
     var raw_assets = altrpHelpers.getDataByPath('altrppagestate.altdata.tables.544d06c5-08eb-406a-ab90-56a457a7a9b7.context.data.rows');
+    //var raw_assets = altrpHelpers.getDataByPath('altrppagestate.altdata.tables');
     var assets = raw_assets.map(({ id, snos_fields }) => ({ id: id.toString(), snos_fields }));
     altrpHelpers.setDataByPath('altrppagestate.assets', 1);
     altrpHelpers.setDataByPath('altrppagestate.assets', assets);
