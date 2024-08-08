@@ -1,0 +1,21 @@
+s_sn_status                                       Снос
+s_snos_fields_snos_snos                           Примечание<br>по сносу
+s_snos_fields_snos_customer                       Заказчик производства<br>работ  по сносу объектов (в т.ч. технический заказчик)
+s_snos_fields_snos_obj_name                       Наименование объекта,<br> рамках которого производится/произведен снос
+s_snos_fields_pp_letters_pp                       Заявки  от ПП по сносу
+s_snos_fields_dgi_letters_dgi                     Письмо в ДГИ  о выпуске<br>РД о сносе/снятие с ГКУ по результату сноса/списание движимого имущества
+s_snos_fields_dgi_letters_rd                      Реквизиты распоряжения<br>о сносе имущества
+s_snos_fields_zak_letters_zak                     Письма заказчикам по сносу
+s_snos_fields_zak_letters_zak_prim                Примечание по взаимодействию<br>с заказчиками по сносу
+
+{{IF_AND_REQUEST:z."Снос":s_sn_status:ILIKE}}
+{{IF_AND_REQUEST:z."Примечание по сносу":s_snos_fields_snos_snos:ILIKE}}
+{{IF_AND_REQUEST:z."Заказчик производства работ по сн":s_snos_fields_snos_customer:ILIKE}}
+{{IF_AND_REQUEST:z."Наименование объекта, в рамках кот":s_snos_fields_snos_obj_name:ILIKE}}
+{{IF_AND_REQUEST:z."Заявки от ПП по сносу":s_snos_fields_pp_letters_pp:ILIKE}}
+{{IF_AND_REQUEST:z."Письмо в ДГИ о выпуске РД о сносе/с":s_snos_fields_dgi_letters_dgi:ILIKE}}
+{{IF_AND_REQUEST:z."Реквизиты распоряжения о сносе им":s_snos_fields_dgi_letters_rd:ILIKE}}
+{{IF_AND_REQUEST:z."Письма заказчикам по сносу":s_snos_fields_zak_letters_zak:ILIKE}}
+{{IF_AND_REQUEST:z."Примечание по взаимодействию с за":s_snos_fields_zak_letters_zak_prim:ILIKE}}
+
+{{IF_AND_REQUEST:z."Балансовая стоимость (на бесхозяй":s_price:ILIKE}}
