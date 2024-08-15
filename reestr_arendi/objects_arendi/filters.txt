@@ -19,3 +19,4 @@ s_snos_fields_zak_letters_zak_prim                Примечание по вз
 {{IF_AND_REQUEST:z."Примечание по взаимодействию с за":s_snos_fields_zak_letters_zak_prim:ILIKE}}
 
 {{IF_AND_REQUEST:z."Балансовая стоимость (на бесхозяй":s_price:ILIKE}}
+{{IF_AND_REQUEST:z."Арендная плата (годовая), руб.":s_price:ILIKE}}
