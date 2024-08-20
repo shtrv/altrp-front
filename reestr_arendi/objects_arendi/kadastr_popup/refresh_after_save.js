@@ -1,7 +1,7 @@
-// Получаем текущий URL
+// Рефреш таблицы asset-rent после сохранения
+
 var currentUrl = window.location.href;
 
-// Проверяем, находится ли пользователь на странице obekti-arendi
-if (currentUrl.includes('obekti-arendi')) {
-    // Выполняем код для страницы obekti-arendi
+// Проверяем, находится ли пользователь на странице assets-rent
+if (currentUrl.includes('assets-rent')) {
     RaiseActions('_refresh_table_');}
