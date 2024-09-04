@@ -5,20 +5,26 @@ InitPopupFunctions({
 	validate: async function(){
 		var ret = await parent_validate();
 		var fire = altrpHelpers.getDataByPath('altrpforms.fire');
+        var jsonData = {};
+        jsonData.fire = fire;
 
 		if (!ValidateFormDefault('fire')) {
             ret.push('Заполните обязательные поля');
         }
 		
-        if (fire.existence == 1 && !fire.category) {
+        if (fire.existence == 2 && !fire.category) {
             ret.push('Укажите категорию пожара');
         }
 		
-        altrpHelpers.setDataByPath('altrpforms.stage.json_data', fire);
+        altrpHelpers.setDataByPath('altrpforms.stage.json_data', jsonData);
 
-        var existenceText = `Наличие пожара - ${fire.existence ? 'да' : 'нет'}`;
-        var categoryText = ` ${fire.category ? fire.category + ' категории' : 'Без категории'}`;
-		var display = existenceText + categoryText;
+        var existenceText = `Наличие пожара - ${fire.existence == 2 ? 'да' : 'нет'}`;
+        var categoryText = '';
+        if (fire.existence == 2) {
+            categoryText = ` | ${fire.category == 6 ? 'Без номера категории' : fire.category + ' категории'}`;
+        }
+		
+        var display = existenceText + categoryText;
         
         altrpHelpers.setDataByPath('altrpforms.stage.display',  display);
 		
