@@ -1,10 +1,13 @@
 //Показываем форму, инициализируем поля
 window.right_panel.style.position = 'fixed';
-window.right_panel.style.width = '60%';
-window.right_panel.style.top = '90px';
-window.right_panel.style.left = '40%';
-window.right_panel.style.right = '';
-window.right_panel.style.bottom = '10%';
+var CurrentBreakpoint = altrpHelpers.getCurrentBreakpoint();
+if (CurrentBreakpoint !== 'Big-Phone' && CurrentBreakpoint !== 'Small-Phone') {
+    window.right_panel.style.width = '60%';
+    window.right_panel.style.top = '90px';
+    window.right_panel.style.left = '40%';
+    window.right_panel.style.right = '';
+    window.right_panel.style.bottom = '10%';
+}
 var doc = altrpHelpers.getDataByPath('altrppagestate._list__current_row');
 var mode = 'show';
 if (appStore.getState().currentUser.data.roles.filter(i=>i.display_name == 'Z_RsuAllDistrict' || i.display_name == 'Z_RsuDistrictChief' || i.display_name == 'Z_Admin').length > 0 && appStore.getState().currentDataStorage.data.approve_all?.result != 1)

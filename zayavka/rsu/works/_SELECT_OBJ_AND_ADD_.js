@@ -42,7 +42,7 @@ window.new_work= async function ()
 		}	
 	});	
 	
-	const CurrentBreakpoint = altrpHelpers.getCurrentBreakpoint();
+	var CurrentBreakpoint = altrpHelpers.getCurrentBreakpoint();
 
 	window.right_panel.style.position = 'fixed';
 	window.modal_background.style.position = 'fixed';
