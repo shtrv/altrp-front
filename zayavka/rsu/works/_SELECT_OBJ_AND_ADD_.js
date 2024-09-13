@@ -54,7 +54,7 @@ window.new_work= async function ()
 		window.right_panel.style.right = '10%';
 		window.right_panel.style.bottom = '10%';
 	} else {
-		window.main_header.style.contentVisibility = 'hidden';
+		document.querySelector('.app-area.app-area_header').style.display = 'none';
 	}
 	
 
