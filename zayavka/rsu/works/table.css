@@ -1,0 +1,45 @@
+/* Скрытие столбцов 2 и 7 по умолчанию */
+
+__selector__ .altrp-table-th:nth-child(2) {
+	display: none;
+}
+__selector__ .altrp-table-td:nth-child(2) {
+  display: none;
+}
+
+__selector__ .altrp-table-th:nth-child(7) {
+	display: none;
+}
+__selector__ .altrp-table-td:nth-child(7) {
+  display: none;
+}
+
+/* Смена столбцов на мобильном брейкпоинте */
+
+@media screen and (max-width: 768px) {
+    __selector__ .altrp-table-th:nth-child(2) {
+		display: table-cell;
+	}
+	__selector__ .altrp-table-td:nth-child(2) {
+    	display: table-cell;
+  	}
+	__selector__ .altrp-table-th:nth-child(7) {
+		display: table-cell;
+	}
+	__selector__ .altrp-table-td:nth-child(7) {
+    	display: table-cell;
+  	}
+
+    __selector__ .altrp-table-th:nth-child(1) {
+    display: none;
+    }
+    __selector__ .altrp-table-td:nth-child(1) {
+    display: none;
+    }
+    __selector__ .altrp-table-th:nth-child(6) {
+    display: none;
+	}
+    __selector__ .altrp-table-td:nth-child(6) {
+    display: none;
+  	}
+}

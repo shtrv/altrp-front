@@ -1,0 +1,30 @@
+/* Скрытие столбца 2 по умолчанию */
+
+__selector__ .altrp-table-th:nth-child(2) {
+	display: none;
+}
+__selector__ .altrp-table-td:nth-child(2) {
+    display: none;
+}
+
+
+/* Смена столбцов на мобильном брейкпоинте */
+
+@media screen and (max-width: 768px) {
+    __selector__ .altrp-table-th:nth-child(2) {
+		display: table-cell;
+	}
+	__selector__ .altrp-table-td:nth-child(2) {
+    	display: table-cell;
+        text-decoration: underline;
+        color: blue;
+        cursor: pointer;
+  	}
+
+    __selector__ .altrp-table-th:nth-child(1) {
+        display: none;
+    }
+    __selector__ .altrp-table-td:nth-child(1) {
+        display: none;
+    }
+}
