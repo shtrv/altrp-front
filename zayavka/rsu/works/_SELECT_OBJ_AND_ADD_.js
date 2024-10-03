@@ -53,8 +53,6 @@ window.new_work= async function ()
 		window.right_panel.style.left = '20%';
 		window.right_panel.style.right = '10%';
 		window.right_panel.style.bottom = '10%';
-	} else {
-		document.querySelector('.app-area.app-area_header').style.display = 'none';
 	}
 	
 

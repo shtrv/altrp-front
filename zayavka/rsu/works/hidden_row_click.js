@@ -7,8 +7,6 @@ if (CurrentBreakpoint !== 'Big-Phone' && CurrentBreakpoint !== 'Small-Phone') {
     window.right_panel.style.left = '40%';
     window.right_panel.style.right = '';
     window.right_panel.style.bottom = '10%';
-} else {
-    document.querySelector('.app-area.app-area_header').style.display = 'none';
 }
 var doc = altrpHelpers.getDataByPath('altrppagestate._list__current_row');
 var mode = 'show';
